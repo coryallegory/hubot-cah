@@ -1,5 +1,6 @@
-# hubot-cah
-Cards Against Humanity for Hubot
+# Cards Against Humanity for Hubot
+
+https://www.npmjs.com/package/hubot-humanity
 
 ## Usage
 
@@ -18,8 +19,6 @@ The round then ends. The player whose submission was chosen earns a point, and b
 ## Installation
 
 Add the package `hubot-cah` as a dependency in your Hubot package.json file. Then add `hubot-cah` to the list in the `external-scripts.json` file.
-
-https://www.npmjs.com/package/hubot-humanity
 
 ## Credits
 

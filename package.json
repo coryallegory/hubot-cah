@@ -1,0 +1,31 @@
+{
+  "name": "hubot-cah",
+  "description": "Hubot-managed Cards Against Humanity.",
+  "version": "0.0.1",
+  "author": "Cory Metcalfe <corymetcalfe@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coryallegory/hubot-cah"
+  },
+  "bugs": {
+    "url": "https://github.com/coryallegory/hubot-cah/issues"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "script/test"
+  }
+}

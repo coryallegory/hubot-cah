@@ -1,6 +1,7 @@
 # Cards Against Humanity for Hubot
 
 https://www.npmjs.com/package/hubot-humanity
+v0.0.1
 
 ## Usage
 

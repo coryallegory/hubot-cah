@@ -63,12 +63,14 @@ lock_submissions = () ->
         game.choices.push submission
     game.choices.sort()
 
+
 time_remaining = () ->
   if game.state == 1
     seconds_passed = ((new Date).getTime() - game.round_start) / 1000
     seconds_remaining = 120 - seconds_passed
     return seconds_remaining
   return 0
+
 
 new_round = (dealer_name) ->
   game.dealer_name = dealer_name
@@ -85,6 +87,7 @@ new_round = (dealer_name) ->
 
 module.exports = (robot) ->
   
+
   robot.respond /cah help/, (msg) ->
     message = 'https://github.com/coryallegory/hubot-cah'
     message = message + 'cah help - List commands'
@@ -98,6 +101,7 @@ module.exports = (robot) ->
     message = message + 'cah choose # - Choose the winning submission. # corresponds to the card choice id.'
     msg.send message
   
+
   robot.respond /cah status/, (msg) ->
     if game.state == 0
       msg.send 'Waiting for players to register.'
@@ -203,6 +207,7 @@ module.exports = (robot) ->
           message = message + '\n'
         message = message + i + ' - ' + card
       msg.send message
+
 
   robots.respond /cah submit ([1-5]) ([1-5])?/, (msg) ->
     if game.state == 1

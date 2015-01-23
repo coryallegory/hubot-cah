@@ -7,13 +7,13 @@ v0.0.1
 
 `hubot cah restart` to begin a new game. (note: this overwrites any games in progress)
 
-Players add themselves to the game by typing `hubot cah register`. The first person to register automatically becomes the initial dealer, at which point the first Black Card should be presented.
+Players add themselves to the game at any time by typing `hubot cah register`. The first person to register automatically becomes the initial dealer, at which point the first Black Card should be presented.
 
-Players can see their hand of 5 White Cards with the command `hubot cah hand`. It is recommended to do this is a private message with Hubot.
+Each round:
 
-Once a player has selected a card (or two cards if the Black Card requires 2), they can submit it using `hubot cah submit # #`.
+Players can see their hand of 5 White Cards by typing `hubot cah hand`. It is recommended to do this in a private message with Hubot so other players can't see each others' hands. Once a player has selected a card (or optionally two cards depending on the current Black Card), they can submit it using `hubot cah submit # #`.
 
-When either 120 seconds have passed, or all players have submitted cards, the game will no longer accept submissions, and will switch to the dealer choice phase. The dealer can type `hubot cah status` to view all of the available choices, then select one by typing `hubot cah choose #`.
+When all players have submitted cards or 120 seconds have passed since the round began, the game will no longer accept submissions, and will switch to the dealer choice phase. The dealer can type `hubot cah status` to view all of the available choices, then select one by typing `hubot cah choose #`.
 
 The round then ends. The player whose submission was chosen earns a point, and becomes the new dealer for the next round.
 

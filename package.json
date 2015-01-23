@@ -1,6 +1,6 @@
 {
   "name": "hubot-cah",
-  "description": "Hubot-managed Cards Against Humanity.",
+  "description": "Cards Against Humanity for Hubot",
   "version": "0.0.1",
   "author": "Cory Metcalfe <corymetcalfe@gmail.com>",
   "license": "MIT",
@@ -27,5 +27,9 @@
   "main": "index.coffee",
   "scripts": {
     "test": "script/test"
+  },
+  "homepage": "https://github.com/coryallegory/hubot-cah",
+  "directories": {
+    "test": "test"
   }
 }

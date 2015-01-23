@@ -6,7 +6,9 @@
   "license": "MIT",
   "keywords": [
     "hubot",
-    "hubot-scripts"
+    "hubot-scripts",
+    "cah",
+    "cards against humanity"
   ],
   "repository": {
     "type": "git",

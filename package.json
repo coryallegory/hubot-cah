@@ -1,7 +1,7 @@
 {
   "name": "hubot-cah",
   "description": "Cards Against Humanity for Hubot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Cory Metcalfe <corymetcalfe@gmail.com>",
   "license": "MIT",
   "keywords": [

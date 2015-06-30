@@ -190,7 +190,7 @@ czar_choose_winner = (answerIndex) ->
     else
       db.czar = db.activePlayers[czarIndex+1]
   return responseString + "\n\nNext round:\n" + game_state_string()
-  
+
 # generate string describing game state
 # czar, black card, number of submissions
 game_state_string = () ->
@@ -202,11 +202,11 @@ game_state_string = () ->
 # @param msg: message object
 # @return name of message sender
 sender = (msg) ->
-  return msg.message.user.name.toLowerCase()
+  return msg.message.user.name
 
 
 module.exports = (robot) ->
-  
+
   robot.respond /cah help$/i, (msg) ->
     msg.send helpSummary
 
@@ -215,17 +215,17 @@ module.exports = (robot) ->
 
   robot.respond /cah white$/i, (msg) ->
     msg.send random_white_card()
-  
+
   robot.respond /cah play$/i, (msg) ->
     name = sender(msg)
     add_player(name)
-    robot.messageRoom name, "You are now an active CAH player."
+    msg.reply "You are now an active CAH player."
 
   robot.respond /cah retire$/i, (msg) ->
     name = sender(msg)
     remove_player(name)
-    robot.messageRoom name, "You are no longer a CAH player. Your score will be preserved should you decide to play again."
-  
+    msg.reply "You are no longer a CAH player. Your score will be preserved should you decide to play again."
+
   robot.respond /cah czar$/i, (msg) ->
     if db.czar?
       msg.send db.czar
@@ -270,7 +270,7 @@ module.exports = (robot) ->
     if cards?
       for i in [0...cards.length] by 1
         responseString += "\n#{i}: #{cards[i]}"
-    robot.messageRoom sender(msg), responseString
+    msg.reply responseString
 
   robot.respond /cah submit(?: ([0-4]+))+$/i, (msg) ->
     if sender(msg) == db.czar
@@ -309,7 +309,7 @@ module.exports = (robot) ->
       for i in [0...answers.length] by 1
         cards = answers[i][1]
         responseString += "\n#{i}: #{generate_phrase(db.blackCard, cards)}"
-      robot.messageRoom db.czar, responseString
+      msg.reply responseString
 
   robot.respond /cah choose ([0-9]+)$/i, (msg) ->
     if sender(msg) != db.czar

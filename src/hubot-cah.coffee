@@ -161,9 +161,7 @@ czar_choose_winner = (answerIndex) ->
     responseString = "*#{db.blackCard}*"
     for answer in db.answers
       responseString += "\n#{answer[1][0]}"
-      i = 1
-      while i < answer[1].length
-        responseString += ", #{answer[1][i]}"
+      responseString += ", #{answer[1][i]}" for i in [1...answer[1].length]
 
     winner = db.answers[answerIndex][0]
     cards = db.answers[answerIndex][1]

@@ -281,7 +281,7 @@ module.exports = (robot) ->
       return
     numString = msg.match[0].split("submit ")[1]
     nums = numString.split(" ")
-    expectedCount = (db.blackCard.match(blackBlank) || []).length
+    expectedCount = db.blackCard.split(blackBlank).length - 1
     if expectedCount == 0
       expectedCount = 1
     if nums.length != expectedCount

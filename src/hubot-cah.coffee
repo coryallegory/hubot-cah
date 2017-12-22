@@ -27,23 +27,24 @@
 #   Cory Metcalfe (corymetcalfe@gmail.com)
 #
 
-helpSummary = "_hubot-cah commands:_"
-helpSummary += "\ncah help - List cah commands"
-helpSummary += "\ncah black - Display a random black card"
-helpSummary += "\ncah white - Display a random white card"
-helpSummary += "\ncah play - Add yourself to the game"
-helpSummary += "\ncah retire - Remove yourself as an active player"
-helpSummary += "\ncah czar - Display name of the current Card Czar"
-helpSummary += "\ncah players - List active players"
-helpSummary += "\ncah leaders - Top five score leaders"
-helpSummary += "\ncah score - Display your score"
-helpSummary += "\ncah hand - List cards in your hand"
-helpSummary += "\ncah submit <#> <#> ... - Indicate white cards to be submitted as an answer, where # indicates card index in hand and amount of white cards submitted corresponds to the amount required by the current black card"
-helpSummary += "\ncah answers - List the current white card submissions for the current black card (Card Czar only)"
-helpSummary += "\ncah choose <#> - Choose a winning answer (Card Czar only)"
-helpSummary += "\ncah status - Display summary of current game"
-helpSummary += "\ncah skip - Discard current black card and assign a new Card Czar"
-
+helpSummary = """
+_hubot-cah commands:_
+#   hubot cah help - List cah commands
+#   hubot cah black - Display a random black card
+#   hubot cah white - Display a random white card
+#   hubot cah play - Add yourself to the game
+#   hubot cah retire - Remove yourself as an active player
+#   hubot cah czar - Display name of the current Card Czar
+#   hubot cah players - List active players
+#   hubot cah leaders - Top five score leaders
+#   hubot cah score - Display your score
+#   hubot cah hand - List cards in your hand
+#   hubot cah submit <#> <#> ... - Indicate white cards to be submitted as an answer, where # indicates card index in hand and amount of white cards submitted corresponds to the amount required by the current black card
+#   hubot cah answers - List the current white card submissions for the current black card (Card Czar only)
+#   hubot cah choose <#> - Choose a winning answer (Card Czar only)
+#   hubot cah status - Display summary of current game
+#   hubot cah skip - Discard current black card and assign a new Card Czar
+"""
 
 blackBlank = "_____"
 

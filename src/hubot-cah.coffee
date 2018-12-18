@@ -214,6 +214,9 @@ module.exports = (robot) ->
   robot.respond /cah white$/i, (msg) ->
     msg.send random_white_card()
 
+  robot.respond /cah random$/i, (msg) ->
+    msg.send random_black_card() + "\n" + random_white_card()
+
   robot.respond /cah play$/i, (msg) ->
     name = sender(msg)
     add_player(name)
